@@ -1,4 +1,4 @@
-# IMEX
+# [IMEX] : Image to Text
 
 **Screenshot & Image → Text (OCR)**
 Application portable Windows 11 développée en C#.
@@ -8,6 +8,12 @@ Application portable Windows 11 développée en C#.
 ## 📥 Télécharger
 
 👉 [Télécharger la dernière version](https://github.com/Liquid-F0rm/IMEX/releases/latest)
+
+---
+
+![Aperçu](images/screenshot1.png)
+
+![Aperçu](images/screenshot2.png)
 
 ---
 
