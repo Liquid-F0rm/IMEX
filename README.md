@@ -23,27 +23,23 @@ Application portable Windows 11 développée en C#.
 
 * Capture d’écran (cliquer / glisser)
 * Glisser-déposer (Drag & Drop)
-* Import via explorateur de fichiers
-  *(formats : .jpg, .jpeg, .png, .ico, .bmp, .tiff)*
+* Import via explorateur de fichiers (formats : .jpg, .jpeg, .png, .ico, .bmp, .tiff)*
 * Export de l’image en **.jpg** ou **.png**
 
----
 
 ### 📝 Zone texte (droite)
 
 * Copier tout le texte
 * Enregistrer en **.txt**
-* Sélection partielle avec clic droit :
+* Sélection partielle avec clic droit : Copier / Couper / Coller
 
-  * Copier / Couper / Coller
-
----
 
 ### ⚙️ Paramètres
 
 * 🌐 Langue : Français / Anglais
 * 🎨 Thème : Clair / Sombre
 * 💾 Sauvegarde de session
+* Redimensionnement de la fenêtre
 
 ---
 
@@ -64,6 +60,7 @@ et d’en extraire le texte automatiquement (OCR).
 
 Lors du premier lancement, Windows peut afficher un avertissement
 ("éditeur inconnu"). C’est normal pour une application non signée.
+Certaines conversions d'images en texte peuvent présenter des erreurs.
 
 ---
 
