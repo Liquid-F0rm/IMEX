@@ -1,27 +1,66 @@
 # IMEX
-- Screenshot & Convert image to text
-- Application portable Windows 11 développée en C#.
+
+**Screenshot & Image → Text (OCR)**
+Application portable Windows 11 développée en C#.
+
+---
 
 ## 📥 Télécharger
-👉 https://github.com/Liquid-F0rm/IMEX/releases/latest
 
-## ⚙️ Fonctionnalités
+👉 [Télécharger la dernière version](https://github.com/Liquid-F0rm/IMEX/releases/latest)
 
-Ecran de gauche pour l'image :
-- Fonction "Capture d'écran" (cliquer/glisser)
-- Fonction "Drag & Drop" (cliquer/déposer) 
-- Fonction "Parcourir..." dans l'explorateur de fichier (fichiers acceptés: .jpg, .jpeg, .png, .ico, .bmp, .tiff)
-- Fonction "Enregitrer..." l'image en .jpg ou .png sur le disque
+---
 
-Ecran de droite pour le convertisseur de texte :
-- Fonction "Copier" tout le texte
-- Fonction "Enregistrer" en .txt sur le disque
-- Fonction "Selectionné" tout ou une partie du texte puis clique droit pour Copier/Couper/Coller 
+## 🖼️ Fonctionnalités
 
-Panneau principal :
-- Fonction "Langue" Français ou Anglais
-- Fonction "Theme" claire ou sombre  
-- Fonction "Sauvegarder" la session en cours
+### 📸 Zone image (gauche)
+
+* Capture d’écran (cliquer / glisser)
+* Glisser-déposer (Drag & Drop)
+* Import via explorateur de fichiers
+  *(formats : .jpg, .jpeg, .png, .ico, .bmp, .tiff)*
+* Export de l’image en **.jpg** ou **.png**
+
+---
+
+### 📝 Zone texte (droite)
+
+* Copier tout le texte
+* Enregistrer en **.txt**
+* Sélection partielle avec clic droit :
+
+  * Copier / Couper / Coller
+
+---
+
+### ⚙️ Paramètres
+
+* 🌐 Langue : Français / Anglais
+* 🎨 Thème : Clair / Sombre
+* 💾 Sauvegarde de session
+
+---
 
 ## 🖥️ Compatibilité
-- Windows 11 Français et Anglais
+
+* Windows 11 (FR / EN)
+
+---
+
+## ℹ️ À propos
+
+IMEX permet de capturer rapidement une image ou une zone d’écran
+et d’en extraire le texte automatiquement (OCR).
+
+---
+
+## ⚠️ Sécurité
+
+Lors du premier lancement, Windows peut afficher un avertissement
+("éditeur inconnu"). C’est normal pour une application non signée.
+
+---
+
+## 📌 Auteur
+
+Projet développé par **Liquid-F0rm**
