@@ -9,9 +9,9 @@ Application portable Windows 11 développée en C#.
 
 Ecran de gauche pour l'image
 - Fonction "Capture d'écran" (cliquer/glisser)
-- Fonction "Drag & Drop" (cliquer/déposer) des fichiers .jpg, .jpeg, .png, .ico, .webp
-- Fonction "Parcourir..." dans l'explorateur de fichier
-- Fonction "Enregitrer..." l'image sur le disque
+- Fonction "Drag & Drop" (cliquer/déposer) 
+- Fonction "Parcourir..." dans l'explorateur de fichier (fichiers acceptés: .jpg, .jpeg, .png, .ico, .bmp, .tiff)
+- Fonction "Enregitrer..." l'image en .jpg ou .png sur le disque
 
 Ecran de droite pour le convertisseur de texte
 - Fonction "Copier" tout le texte
