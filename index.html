@@ -1,14 +1,120 @@
-<h1>IMEX - Image to Text OCR</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>IMEX - OCR Image to Text</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p>Application Windows 11 C# pour extraire du texte depuis des images.</p>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+    }
 
-<a href="https://github.com/Liquid-F0rm/IMEX/releases/latest">
-Télécharger IMEX
-</a>
+    .container {
+      padding: 60px 20px;
+    }
 
-<h2>Fonctionnalités</h2>
-<ul>
-  <li>Capture d’écran</li>
-  <li>OCR automatique</li>
-  <li>Drag & Drop</li>
-</ul>
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+    }
+
+    .features {
+      margin-top: 60px;
+    }
+
+    .features h2 {
+      margin-bottom: 20px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+    }
+
+    .screenshots {
+      margin-top: 60px;
+    }
+
+    .screenshots img {
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin: 15px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>IMEX</h1>
+    <p>Application Windows 11 pour extraire du texte depuis des images et captures d’écran (OCR).</p>
+
+    <a class="download-btn" href="https://github.com/Liquid-F0rm/IMEX/releases/latest">
+      ⬇ Télécharger IMEX
+    </a>
+
+    <div class="features">
+      <h2>Fonctionnalités</h2>
+      <ul>
+        <li>📸 Capture d’écran</li>
+        <li>🖱️ Drag & Drop d’images</li>
+        <li>🔎 OCR automatique</li>
+        <li>💾 Export texte et image</li>
+        <li>🌙 Thème clair / sombre</li>
+      </ul>
+    </div>
+
+    <div class="screenshots">
+      <h2>Aperçu</h2>
+      <img src="images/screenshot1.png">
+      <img src="images/screenshot2.png">
+    </div>
+
+    <footer>
+      © 2026 - IMEX by Liquid-F0rm
+    </footer>
+  </div>
+
+</body>
+</html>
