@@ -1,6 +1,6 @@
 # IMEX
 Screenshot & Convert image to text
-Application portable Windows 11 développée en C#.
+  Application portable Windows 11 développée en C#.
 
 ## 📥 Télécharger
 👉 https://github.com/Liquid-F0rm/IMEX/releases/latest
@@ -19,9 +19,9 @@ Ecran de droite pour le convertisseur de texte
 - Fonction "Selectionné" tout ou une partie du texte puis clique droit pour Copier/Couper/Coller 
 
 Panneau principal
--Fonction "Langue" Français ou Anglais
--Fonction "Theme" claire ou sombre  
--Fonction "Sauvegarder" la session en cours
+- Fonction "Langue" Français ou Anglais
+- Fonction "Theme" claire ou sombre  
+- Fonction "Sauvegarder" la session en cours
 
 ## 🖥️ Compatibilité
 - Windows 11 Français et Anglais
