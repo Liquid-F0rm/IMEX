@@ -11,9 +11,9 @@ Application portable Windows 11 développée en C#.
 
 ---
 
-![Aperçu](images/screenshot1.png)
+![images](images/screenshot1.png)
 
-![Aperçu](images/screenshot2.png)
+![images](images/screenshot2.png)
 
 ---
 
