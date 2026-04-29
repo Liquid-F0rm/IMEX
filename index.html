@@ -1,120 +1,129 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IMEX - OCR Image to Text</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      text-align: center;
-    }
+<title>IMEX - OCR Image to Text Windows App</title>
 
-    .container {
-      padding: 60px 20px;
-    }
+<meta name="description" content="IMEX is a Windows OCR app to extract text from images and screenshots instantly.">
+<meta name="keywords" content="OCR Windows, image to text, screenshot OCR, C# OCR">
+<meta name="author" content="Liquid-F0rm">
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#0f172a;
+  color:#e2e8f0;
+  text-align:center;
+}
 
-    p {
-      font-size: 18px;
-      color: #94a3b8;
-      max-width: 600px;
-      margin: auto;
-    }
+.hero{
+  padding:100px 20px;
+}
 
-    .download-btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 18px;
-      color: white;
-      background: linear-gradient(135deg, #3b82f6, #6366f1);
-      border-radius: 10px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+h1{
+  font-size:60px;
+  background:linear-gradient(90deg,#3b82f6,#6366f1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .download-btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(135deg, #2563eb, #4f46e5);
-    }
+p{
+  font-size:20px;
+  color:#94a3b8;
+}
 
-    .features {
-      margin-top: 60px;
-    }
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:18px 40px;
+  font-size:20px;
+  color:white;
+  background:linear-gradient(135deg,#3b82f6,#6366f1);
+  border-radius:12px;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn:hover{
+  transform:scale(1.1);
+}
 
-    .features h2 {
-      margin-bottom: 20px;
-    }
+.badges img{
+  margin:5px;
+}
 
-    .features ul {
-      list-style: none;
-      padding: 0;
-    }
+.section{
+  padding:60px 20px;
+}
 
-    .features li {
-      margin: 10px 0;
-    }
+.card{
+  background:#1e293b;
+  padding:20px;
+  margin:10px;
+  border-radius:12px;
+  display:inline-block;
+}
 
-    .screenshots {
-      margin-top: 60px;
-    }
-
-    .screenshots img {
-      width: 80%;
-      max-width: 700px;
-      border-radius: 10px;
-      margin: 15px 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
-
-    footer {
-      margin-top: 80px;
-      font-size: 14px;
-      color: #64748b;
-    }
-  </style>
+.screens img{
+  width:80%;
+  max-width:700px;
+  margin:20px 0;
+  border-radius:12px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>IMEX</h1>
-    <p>Application Windows 11 pour extraire du texte depuis des images et captures d’écran (OCR).</p>
+<div class="hero">
+  <h1>IMEX</h1>
+  <p id="desc">Extract text from images instantly.</p>
 
-    <a class="download-btn" href="https://github.com/Liquid-F0rm/IMEX/releases/latest">
-      ⬇ Télécharger IMEX
-    </a>
+  <a class="btn" id="btn" href="https://github.com/Liquid-F0rm/IMEX/releases/latest">
+    ⬇ Download IMEX
+  </a>
 
-    <div class="features">
-      <h2>Fonctionnalités</h2>
-      <ul>
-        <li>📸 Capture d’écran</li>
-        <li>🖱️ Drag & Drop d’images</li>
-        <li>🔎 OCR automatique</li>
-        <li>💾 Export texte et image</li>
-        <li>🌙 Thème clair / sombre</li>
-      </ul>
-    </div>
-
-    <div class="screenshots">
-      <h2>Aperçu</h2>
-      <img src="screenshot1.png">
-      <img src="screenshot2.png">
-    </div>
-
-    <footer>
-      © 2026 - IMEX by Liquid-F0rm
-    </footer>
+  <div class="badges">
+    <img src="https://img.shields.io/github/downloads/Liquid-F0rm/IMEX/total">
+    <img src="https://img.shields.io/github/v/release/Liquid-F0rm/IMEX">
+    <img src="https://img.shields.io/github/stars/Liquid-F0rm/IMEX">
   </div>
+</div>
+
+<div class="section">
+  <h2 id="featTitle">Features</h2>
+  <div id="featList">
+    <div class="card">📸 Screenshot</div>
+    <div class="card">🖱️ Drag & Drop</div>
+    <div class="card">🔎 OCR</div>
+    <div class="card">💾 Export</div>
+  </div>
+</div>
+
+<div class="section screens">
+  <h2 id="prevTitle">Preview</h2>
+  <img src="screenshot1.png">
+  <img src="screenshot2.png">
+</div>
+
+<script>
+const lang = navigator.language;
+if(lang.startsWith("fr")){
+  document.getElementById("desc").innerText =
+    "Extraction de texte depuis des images et captures d’écran.";
+
+  document.getElementById("btn").innerText =
+    "⬇ Télécharger IMEX";
+
+  document.getElementById("featTitle").innerText =
+    "Fonctionnalités";
+
+  document.getElementById("prevTitle").innerText =
+    "Aperçu";
+}
+</script>
 
 </body>
 </html>
