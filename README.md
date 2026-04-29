@@ -1,6 +1,6 @@
 # IMEX
--Screenshot & Convert image to text
--Application portable Windows 11 développée en C#.
+- Screenshot & Convert image to text
+- Application portable Windows 11 développée en C#.
 
 ## 📥 Télécharger
 👉 https://github.com/Liquid-F0rm/IMEX/releases/latest
