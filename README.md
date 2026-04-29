@@ -60,7 +60,7 @@ et d’en extraire le texte automatiquement (OCR).
 
 Lors du premier lancement, Windows peut afficher un avertissement
 ("éditeur inconnu"). C’est normal pour une application non signée.
-Certaines conversions d'images en texte peuvent présenter des erreurs.
+Certaines conversions d'images en textes peuvent présenter des erreurs.
 
 ---
 
