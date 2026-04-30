@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfImageToText.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Paramètre" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WindowWidth (Type: double, Valeur par défaut: 900)</Value>
+    </Setting>
+    <Setting Name="Paramètre1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WindowHeight (Type: double, Valeur par défaut: 600)</Value>
+    </Setting>
+    <Setting Name="Paramètre2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WindowLeft (Type: double, Valeur par défaut: 100)</Value>
+    </Setting>
+    <Setting Name="Paramètre3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WindowTop (Type: double, Valeur par défaut: 100)</Value>
+    </Setting>
+    <Setting Name="ThemeParameter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"light" (comme valeur par défaut)</Value>
+    </Setting>
+    <Setting Name="LanguageParameter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fr</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

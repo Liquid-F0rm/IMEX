@@ -1,0 +1,180 @@
+<Window x:Class="WpfImageToText.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WpfImageToText"
+        Title="WpfImageToText" 
+        Height="600" Width="900"
+        WindowStartupLocation="Manual"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanResize">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="6"/>
+    </WindowChrome.WindowChrome>
+    <Border BorderBrush="Transparent" BorderThickness="1" Background="Transparent">
+        <Border BorderBrush="Transparent" BorderThickness="0" CornerRadius="30" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Barre de titre personnalisée -->
+                <DockPanel Grid.Row="0" Background="Black" Height="40" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                    <TextBlock Text="[Imex]: Image-to-Text"
+                               FontSize="18"
+                               VerticalAlignment="Center"
+                               Margin="15,0,0,0"
+                               Foreground="WhiteSmoke" 
+                               FontFamily="Corbel Light"/>
+                    <StackPanel Orientation="Horizontal" 
+                                DockPanel.Dock="Right" 
+                                HorizontalAlignment="Right">
+                        <Button Content="─"
+                                Width="40"
+                                Height="40"
+                                Click="MinimizeButton_Click"
+                                Background="Transparent"
+                                BorderBrush="{x:Null}"
+                                Foreground="#FFB7FF00" 
+                                Padding="5,2,5,4" 
+                                FontSize="18" 
+                                FontFamily="Corbel Light" 
+                                FontWeight="Bold" 
+                                VerticalAlignment="Center"/>
+                        <Button Content="X"
+                                Width="40"
+                                Height="40"
+                                Click="CloseButton_Click"
+                                Background="Transparent"
+                                BorderBrush="{x:Null}"
+                                Foreground="#FFFF00BB" 
+                                Padding="5,2,5,4" 
+                                FontSize="18" 
+                                FontFamily="Corbel Light" 
+                                FontWeight="Bold" 
+                                VerticalAlignment="Center"/>
+                    </StackPanel>
+                </DockPanel>
+
+                <!-- Le reste de votre interface -->
+                <Grid x:Name="GridContent" Grid.Row="1">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF9E6AFF"/>
+                            <GradientStop Color="#FF8DE6FD" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Volet gauche : Image + boutons Parcourir et Capture -->
+                    <Border x:Name="BorderLeft" Grid.Column="0" Grid.Row="0" Margin="10,19,10,0" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" AllowDrop="True" Drop="ImageDrop" PreviewDragOver="Border_PreviewDragOver" Background="WhiteSmoke">
+                        <DockPanel LastChildFill="True" Margin="0,-1,0,0">
+                            <Grid DockPanel.Dock="Top">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5">
+                                    <Button x:Name="BrowseButton"
+                                            Content="Parcourir..."
+                                            Width="100"
+                                            Height="30"
+                                            Click="BrowseButton_Click"/>
+                                    <Button x:Name="CaptureButton"
+                                            Content="Capture d'écran"
+                                            Width="120"
+                                            Height="30"
+                                            Margin="5,0,0,0"
+                                            Click="CaptureButton_Click"/>
+                                </StackPanel>
+                                <Button x:Name="SaveasButton"
+                                        Content="Enregistrer sous..."
+                                        Width="120"
+                                        Height="30"
+                                        Click="Saveas_Click" 
+                                        HorizontalAlignment="Right" 
+                                        Margin="0,5,5,4"/>
+                            </Grid>
+
+                            <!-- Zone Image -->
+                            <Image x:Name="ImagePreview"
+                                   Margin="5"
+                                   Stretch="Uniform"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                        </DockPanel>
+                    </Border>
+
+
+
+                    <!-- Volet droit : Texte OCR + bouton Copier -->
+                    <Border x:Name="BorderRight" Grid.Column="1" Grid.Row="0" Margin="10,19,10,0" BorderBrush="Gray" BorderThickness="1" CornerRadius="5"
+                            Background="White">
+                        <DockPanel LastChildFill="True" Margin="0,-1,0,0">
+                            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0,5,0">
+                                <Button x:Name="SaveTextButton"
+                                        Content="Enregistrer en .txt"
+                                        Width="120"
+                                        Height="30"
+                                        Click="SaveTextButton_Click"
+                                        Margin="0,5,5,4"/>
+                                <Button x:Name="CopyButton"
+                                        Content="Copier"
+                                        Width="80"
+                                        Height="30"
+                                        Click="CopyButton_Click"/>
+                            </StackPanel>
+
+                            <!-- Zone texte -->
+                            <TextBox x:Name="OcrTextBox"
+                                     Margin="6"
+                                     AcceptsReturn="True"
+                                     AcceptsTab="True"
+                                     VerticalScrollBarVisibility="Auto"
+                                     HorizontalScrollBarVisibility="Auto"
+                                     TextWrapping="Wrap"
+                                     FontSize="14"
+                                     FontFamily="Segoe UI"
+                                     Padding="8"
+                                     IsReadOnly="False" 
+                                     Background="#FEFEFE"
+                                     BorderThickness="1"
+                                     BorderBrush="DarkGray">
+                                <TextBox.Effect>
+                                    <DropShadowEffect Color="#DDDDDD" Direction="315" 
+                                                      ShadowDepth="2" Opacity="0.2" BlurRadius="4"/>
+                                </TextBox.Effect>
+                            </TextBox>
+                        </DockPanel>
+                    </Border>
+
+                    <!-- Boutons Reset et Thème en bas -->
+                    <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,10,50,10">
+                        <Button x:Name="LanguageButton"
+                                Content="Français"
+                                Width="110"
+                                Height="30"
+                                Click="Language_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Button x:Name="ThemeButton"
+                                Content="Thème"
+                                Width="80"
+                                Height="25"
+                                Margin="20,0,0,0"
+                                Click="ThemeButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Button x:Name="SaveButton" 
+                                Content="Sauvegarder" 
+                                Click="SaveButton_Click" 
+                                Width="100" Height="30" 
+                                Margin="20,20,-30,20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

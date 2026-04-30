@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <!-- Désactiver la génération C#/WinRT pour éviter les conflits -->
+    <CsWinRTEnabled>false</CsWinRTEnabled>
+    <ApplicationIcon>IMEX Icône.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="IMEX Icône.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Windows Community Toolkit contient des wrappers pour les API WinRT -->
+    <PackageReference Include="Magick.NET-Q16-AnyCPU" Version="14.13.0" />
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls" Version="7.1.3" />
+    <PackageReference Include="SkiaSharp" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.Views.WPF" Version="3.119.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\eudef\.nuget\packages\tesseract.net.sdk\4.6.411\build\..\content\tessdata\configs\config.cfg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\eudef\.nuget\packages\tesseract.net.sdk\4.6.411\build\..\content\tessdata\eng.traineddata" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\eudef\.nuget\packages\tesseract.net.sdk\4.6.411\build\..\content\tessdata\equ.traineddata" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\eudef\.nuget\packages\tesseract.net.sdk\4.6.411\build\..\content\tessdata\osd.traineddata" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\eudef\.nuget\packages\tesseract.net.sdk\4.6.411\build\..\content\tessdata\pdf.ttf" />
+ </ItemGroup>
+</Project>
