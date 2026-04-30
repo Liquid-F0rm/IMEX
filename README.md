@@ -18,6 +18,7 @@ Elle est développée par vibe coding en C# / WPF et fonctionne entièrement en 
 
 ✨ Fonctionnalités
 
+
 🖼️ Entrée d’images
 * Capture d’écran (sélection de zone)
 * Glisser-déposer d’images
@@ -59,11 +60,11 @@ IMEX permet de capturer rapidement une image ou une zone d’écran et d’en ex
 ---
 
 🔐 Confidentialité & sécurité
-✔ Application 100% hors ligne
-✔ Aucune télémétrie
-✔ Aucune connexion réseau
-✔ Aucune collecte de données
-✔ Tout le traitement est effectué localement sur la machine
+ ✔ Application 100% hors ligne
+ ✔ Aucune télémétrie
+ ✔ Aucune connexion réseau
+ ✔ Aucune collecte de données
+ ✔ Tout le traitement est effectué localement sur la machine
 
 Lors du premier lancement, Windows peut afficher un avertissement ("éditeur inconnu"). C’est normal pour une application non signée.
 
