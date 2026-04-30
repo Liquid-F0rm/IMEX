@@ -19,23 +19,23 @@ Elle est développée par vibe coding en C# / WPF et fonctionne entièrement en 
 ✨ Fonctionnalités
 
 🖼️ Entrée d’images
-Capture d’écran (sélection de zone)
-Glisser-déposer d’images
-Import via explorateur de fichiers (.png, .jpg, .jpeg, .bmp, .tiff, .ico)
+* Capture d’écran (sélection de zone)
+* Glisser-déposer d’images
+* Import via explorateur de fichiers (.png, .jpg, .jpeg, .bmp, .tiff, .ico)
 
 🧠 OCR (reconnaissance de texte)
-Extraction automatique du texte (Tesseract OCR)
-Support multi-langues (FR / EN)
+* Extraction automatique du texte (Tesseract OCR)
+* Support multi-langues (FR / EN)
 
 🎨 Prétraitement d’image (améliore la précision OCR)
-Conversion en niveaux de gris
-Amélioration du contraste
-Réduction du bruit (Magick.NET)
+* Conversion en niveaux de gris
+* Amélioration du contraste
+* Réduction du bruit (Magick.NET)
 
 📋 Sortie de texte
-Copier dans le presse-papiers
-Enregistrer en .txt
-Zone de texte éditable (sélection, clic droit copier/couper/coller)
+* Copier dans le presse-papiers
+* Enregistrer en .txt
+* Zone de texte éditable (sélection, clic droit copier/couper/coller)
 
 ---
 
@@ -47,15 +47,14 @@ Zone de texte éditable (sélection, clic droit copier/couper/coller)
 
 ## ℹ️ À propos
 
-IMEX permet de capturer rapidement une image ou une zone d’écran
-et d’en extraire le texte automatiquement (OCR).
+IMEX permet de capturer rapidement une image ou une zone d’écran et d’en extraire le texte automatiquement (OCR).
 
 ---
 
 ⚙️ Technologies utilisées
-C# (.NET / WPF)
-Tesseract OCR
-Magick.NET (prétraitement d’images)
+* C# (.NET / WPF)
+* Tesseract OCR
+* Magick.NET (prétraitement d’images)
 
 ---
 
@@ -66,8 +65,7 @@ Magick.NET (prétraitement d’images)
 ✔ Aucune collecte de données
 ✔ Tout le traitement est effectué localement sur la machine
 
-Lors du premier lancement, Windows peut afficher un avertissement
-("éditeur inconnu"). C’est normal pour une application non signée.
+Lors du premier lancement, Windows peut afficher un avertissement ("éditeur inconnu"). C’est normal pour une application non signée.
 
 ---
 
@@ -77,9 +75,9 @@ IMEX a été créé à l’origine comme un outil personnel simple pour facilite
 
 Objectifs :
 
-extraction rapide de texte depuis images
-interface légère et simple
-fonctionnement 100% hors ligne
+* extraction rapide de texte depuis images
+* interface légère et simple
+* fonctionnement 100% hors ligne
 
 ---
 
