@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IMEX - OCR Image to Text</title>
+
+<meta name="description" content="IMEX is a premium Windows OCR app to extract text from images instantly.">
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+h1{
+  font-size:90px;
+  font-weight:600;
+  letter-spacing:-3px;
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s forwards;
+}
+
+p{
+  font-size:24px;
+  color:#aaa;
+  max-width:600px;
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1.3s forwards;
+}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* BUTTON */
+.btn{
+  margin-top:40px;
+  padding:18px 50px;
+  border-radius:40px;
+  font-size:20px;
+  text-decoration:none;
+  color:#000;
+  background:#fff;
+  transition:.3s;
+}
+.btn:hover{
+  transform:scale(1.07);
+  background:#ddd;
+}
+
+/* SECTION */
+.section{
+  padding:140px 20px;
+  text-align:center;
+}
+
+/* TEXT BLOCK */
+.big-text{
+  font-size:48px;
+  max-width:900px;
+  margin:auto;
+  line-height:1.2;
+  opacity:0;
+  transform:translateY(50px);
+  transition:1s;
+}
+.big-text.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* PARALLAX IMAGE */
+.visual{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.visual img{
+  width:80%;
+  max-width:900px;
+  border-radius:20px;
+  transform:scale(0.8);
+  transition:transform 1s;
+}
+
+.visual.show img{
+  transform:scale(1);
+}
+
+/* FOOTER */
+footer{
+  padding:60px;
+  color:#666;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>IMEX</h1>
+  <p id="desc">Turn images into text. Instantly.</p>
+
+  <a class="btn" id="btn" href="https://github.com/Liquid-F0rm/IMEX/releases/latest">
+    Download for Windows
+  </a>
+</div>
+
+<!-- STORY 1 -->
+<div class="section">
+  <div class="big-text">Capture. Extract. Done.</div>
+</div>
+
+<!-- IMAGE -->
+<div class="visual">
+  <img src="images/screenshot1.png">
+</div>
+
+<!-- STORY 2 -->
+<div class="section">
+  <div class="big-text">From screenshot to text in seconds.</div>
+</div>
+
+<!-- IMAGE -->
+<div class="visual">
+  <img src="images/screenshot2.png">
+</div>
+
+<!-- STORY 3 -->
+<div class="section">
+  <div class="big-text">Simple. Fast. Powerful.</div>
+</div>
+
+<footer>
+© 2026 IMEX by Liquid-F0rm
+</footer>
+
+<script>
+// 🌍 langue auto
+const lang=navigator.language;
+if(lang.startsWith("fr")){
+  document.getElementById("desc").innerText="Transformez vos images en texte instantanément.";
+  document.getElementById("btn").innerText="Télécharger pour Windows";
+
+  document.querySelectorAll(".big-text")[0].innerText="Capture. Extraction. Sauvegarde.";
+  document.querySelectorAll(".big-text")[1].innerText="Du screenshot au texte en 1 seconde.";
+  document.querySelectorAll(".big-text")[2].innerText="Simple, Rapide et Efficace.";
+}
+
+// 🔥 scroll animations
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".big-text, .visual").forEach(el=>observer.observe(el));
+
+// 🧠 bouton intelligent OS
+const platform=navigator.platform.toLowerCase();
+if(platform.includes("win")){
+  document.getElementById("btn").innerText+=" (64-bit)";
+}
+</script>
+
+</body>
+</html>
